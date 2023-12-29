@@ -1,4 +1,4 @@
-package com.rajkarnikarunish.movies;
+package com.rajkarnikarunish.movies.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

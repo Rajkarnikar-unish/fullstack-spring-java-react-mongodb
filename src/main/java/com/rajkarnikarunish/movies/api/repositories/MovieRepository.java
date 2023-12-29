@@ -1,5 +1,6 @@
-package com.rajkarnikarunish.movies;
+package com.rajkarnikarunish.movies.api.repositories;
 
+import com.rajkarnikarunish.movies.models.Movie;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;

@@ -1,5 +1,7 @@
-package com.rajkarnikarunish.movies;
+package com.rajkarnikarunish.movies.api.controllers;
 
+import com.rajkarnikarunish.movies.models.Review;
+import com.rajkarnikarunish.movies.services.ReviewService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

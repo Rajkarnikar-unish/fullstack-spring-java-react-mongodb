@@ -1,6 +1,7 @@
-package com.rajkarnikarunish.movies;
+package com.rajkarnikarunish.movies.services;
 
-import org.bson.types.ObjectId;
+import com.rajkarnikarunish.movies.models.Movie;
+import com.rajkarnikarunish.movies.api.repositories.MovieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +22,7 @@ public class MovieService {
         return movieRepository.findAll();
     }
 
-    public Optional<Movie> singelMovie(String imdbId) {
+    public Optional<Movie> singleMovie(String imdbId) {
         return movieRepository.findMovieByImdbId(imdbId);
     }
 }

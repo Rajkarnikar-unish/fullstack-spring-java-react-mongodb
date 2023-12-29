@@ -1,5 +1,7 @@
-package com.rajkarnikarunish.movies;
+package com.rajkarnikarunish.movies.api.controllers;
 
+import com.rajkarnikarunish.movies.models.Movie;
+import com.rajkarnikarunish.movies.services.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,6 +34,6 @@ public class MovieController {
 
     @GetMapping("/{imdbId}")
     public ResponseEntity<Optional<Movie>> getSingleMovie(@PathVariable String imdbId) {
-        return new ResponseEntity<Optional<Movie>>(movieService.singelMovie(imdbId), HttpStatus.OK);
+        return new ResponseEntity<Optional<Movie>>(movieService.singleMovie(imdbId), HttpStatus.OK);
     }
 }
