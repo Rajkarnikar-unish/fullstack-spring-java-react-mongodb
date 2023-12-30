@@ -17,6 +17,11 @@ public class UserService {
 
     @Autowired
     private UserRepository userRepository;
+    private EncryptionService encryptionService;
+
+    UserService(EncryptionService encryptionService) {
+        this.encryptionService = encryptionService;
+    }
 
     public User registerUser(UserRegistration userRegistration) throws UserAlreadyExistsException,
             EmailFailureException {
@@ -27,8 +32,8 @@ public class UserService {
         User user = userRepository.insert(
                 new User(
                         userRegistration.getUsername(),
+                        encryptionService.encryptPassword(userRegistration.getPassword()),
                         userRegistration.getEmail(),
-                        userRegistration.getPassword(),
                         userRegistration.getFirstName(),
                         userRegistration.getLastName()
                 )

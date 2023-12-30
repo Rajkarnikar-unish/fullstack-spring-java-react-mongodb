@@ -47,7 +47,7 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<LoginResponse> loginUser(@Valid @RequestBody LoginBody loginBody) {
-
+        String jwt = null;
         LoginResponse response = new LoginResponse();
         response.setSuccess(true);
         return ResponseEntity.ok(response);
